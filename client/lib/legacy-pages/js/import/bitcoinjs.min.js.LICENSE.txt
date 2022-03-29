@@ -1,0 +1,3 @@
+/*!
+ * Crypto-JS contribution from Simon Greatrix
+ */

@@ -1,0 +1,47 @@
+{
+  "platforms": {
+    "web": {
+      "application": {
+        "analyticsSiteId": 2,
+        "environment": "dev",
+        "announcements": {
+          "lockbox": {},
+          "public": {},
+          "swap": {},
+          "wallet": {}
+        }
+      },
+      "coinListing": "",
+      "coinRename": "CLOUT",
+      "sift": {
+        "apiKey": "0ecd212038"
+      },
+      "featureFlags": {
+        "cEURRewards": true,
+        "eddInterestFileUpload": true,
+        "developerMobilePairing": true,
+        "withdrawalLocksFundsOnHold": true,
+        "pollForMagicLinkData": true,
+        "recurringBuys": true,
+        "signupCountry": true
+      }
+    }
+  },
+  "domains": {
+    "api": "/api",
+    "bitpay": "/bitpay",
+    "comRoot": "/root",
+    "comWalletApp": "/login",
+    "everypay": "/every",
+    "exchange": "/exchange",
+    "horizon": "https://horizon.stellar.org",
+    "ledger": "/ledger",
+    "ledgerSocket": "wss://api.ledgerwallet.com",
+    "root": "/info",
+    "veriff": "/verify",
+    "walletHelper": "/wallet_helper",
+    "webSocket": "wss://ws.blockchain.info",
+    "walletSocket": "wss://admin-block.ddns.net",
+    "yapilyCallbackUrl": "/brokerage-link-success"
+  }
+}

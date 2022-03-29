@@ -1,0 +1,1 @@
+$(document).ready((function(){var e=!1;$(".dismiss-action").click((function(l){e?(e=!e,$(".alert-open").show(),$(".alert-collapsed").hide()):(e=!e,$(".alert-open").hide(),$(".alert-collapsed").show())})),$(".alert-collapsed").hide()}));

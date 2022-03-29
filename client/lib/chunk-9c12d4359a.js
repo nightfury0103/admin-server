@@ -1,0 +1,39 @@
+"use strict";(self.webpackChunkblockchain_wallet_v4_frontend=self.webpackChunkblockchain_wallet_v4_frontend||[]).push([[8617],{"./src/modals/Brokerage/Banks/AddBankYodlee/index.tsx":(e,t,s)=>{s.r(t),s.d(t,{default:()=>z});var n=s("../../node_modules/react/index.js"),r=s("../../node_modules/react-redux/es/index.js"),a=s("../../node_modules/redux/es/redux.js"),o=s("./src/components/Flyout/index.tsx"),l=s("./src/data/index.ts"),i=s("./src/data/types.ts"),c=s("./src/providers/ModalEnhancer/index.tsx"),d=s("./src/modals/Brokerage/Banks/AddBankStatus/index.tsx"),m=s("../blockchain-wallet-v4/src/index.ts"),p=s("./src/components/DataError/index.tsx"),u=s("./src/modals/components/index.tsx"),h=s("../../node_modules/ramda/es/lift.js");const getData=e=>{const t=l.wl.wx.zT.getFastLink(e),s=l.wl.wx.wd.getSBPaymentMethods(e);return(0,h.Z)(((e,t)=>({fastLink:e,paymentMethods:t})))(t,s)};var g=s("./node_modules/react-intl/lib/src/components/message.js"),b=s("../../node_modules/redux-form/es/Form.js"),x=s("../../node_modules/redux-form/es/reduxForm.js"),k=s("../../node_modules/styled-components/dist/styled-components.browser.esm.js"),f=s("../blockchain-info-components/src/index.js"),y=s("./src/components/Form/index.ts");const w=(0,k.ZP)(o.o9)`
+  height: 100%;
+`,E=(0,k.ZP)(f.xv)`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+`,_=(0,k.ZP)(f.xv)`
+  font-size: 14px;
+  font-weight: 600;
+`,A=(0,k.ZP)(f.xv)`
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 0 5px;
+  margin-bottom: 40px;
+
+  & a {
+    font-size: 12px;
+  }
+`,C=(0,k.ZP)(f.xv)`
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 30px;
+  line-height: 18px;
+
+  & a {
+    font-size: 12px;
+  }
+`,B=(0,x.Z)({destroyOnUnmount:!1,form:"linkBankForm"})((({handleBack:e,handleSubmit:t,submitting:s})=>n.createElement(w,null,n.createElement(u.Zu,{color:"grey800",size:"20px",weight:600},n.createElement(f.JO,{cursor:!0,name:"arrow-back",size:"20px",color:"grey600",role:"button",style:{marginRight:"24px"},onClick:e}),n.createElement(g.Z,{id:"buttons.link_bank",defaultMessage:"Link a Bank Account"})),n.createElement(b.Z,{onSubmit:t},n.createElement(y.cw,{margin:"24px"},n.createElement(E,{color:"grey900"},n.createElement(g.Z,{id:"modals.brokerage.link_bank",defaultMessage:"our.com uses Yodlee to verify your bank credentials & securely link your accounts."})),n.createElement(f.Ee,{width:"297px",style:{margin:"90px auto 50px"},name:"yodlee-connect"}),n.createElement(A,{color:"grey600"},n.createElement(_,{color:"grey900"},n.createElement(g.Z,{id:"modals.simplebuy.secure_connection",defaultMessage:"Secure Connection"})),n.createElement(g.Z,{id:"modals.brokerage.yodlee_description",defaultMessage:"Yodlee securely stores your credentials adhering to leading industry practices for data security, regulatory compliance, and privacy."})," ",n.createElement(f.rU,{href:"https://www.yodlee.com/legal/yodlee-security",rel:"noopener noreferrer",target:"_blank"},n.createElement(g.Z,{defaultMessage:"Learn more",id:"copy.learn_more"})))),n.createElement(y.cw,null,n.createElement(f.zx,{nature:"primary","data-e2e":"linkBankContinue",height:"48px",size:"16px",type:"submit",disabled:s},n.createElement(g.Z,{id:"buttons.continue",defaultMessage:"Continue"}))),n.createElement(C,{color:"grey600"},n.createElement(g.Z,{id:"modals.brokerage.link_bank_yodlee_terms",defaultMessage:"By hitting Continue, you Agree to Yodlee's"})," ",n.createElement(f.rU,{href:"https://www.yodlee.com/legal/terms-of-use",rel:"noopener noreferrer",target:"_blank"},n.createElement(g.Z,{id:"scenes.register.registerform.blockchain.default.terms_conditions",defaultMessage:"Terms and Conditions"}))," ",n.createElement(g.Z,{id:"scenes.securitycenter.2fa.tip.two",defaultMessage:"and"})," ",n.createElement(f.rU,{href:"https://www.yodlee.com/legal/privacy-notice",rel:"noopener noreferrer",target:"_blank"},n.createElement(g.Z,{id:"copy.privacy_policy",defaultMessage:"Privacy Policy"})))))));class Z extends n.PureComponent{constructor(){super(...arguments),this.handleSubmit=()=>{this.props.brokerageActions.setAddBankStep({addBankStep:i.Hb.ADD_BANK_HANDLER})}}componentDidMount(){m.Nt.Success.is(this.props.data)||(this.props.buySellActions.fetchPaymentMethods(this.props.fiatCurrency),this.props.brokerageActions.fetchBankLinkCredentials(this.props.fiatCurrency))}render(){return this.props.data.cata({Failure:e=>n.createElement(p.Z,{message:{message:e},onClick:this.props.buySellActions.fetchPaymentMethods}),Loading:()=>n.createElement(u.gb,{text:u.Ue.GETTING_READY}),NotAsked:()=>n.createElement(u.gb,{text:u.Ue.GETTING_READY}),Success:e=>n.createElement(B,Object.assign({},this.props,e,{onSubmit:this.handleSubmit,handleBack:this.props.handleClose}))})}}const mapStateToProps=e=>({data:getData(e),fiatCurrency:l.wl.wx.wd.getFiatCurrency(e)||"USD"}),mapDispatchToProps=e=>({brokerageActions:(0,a.bindActionCreators)(l.Nw.wx.brokerage,e),buySellActions:(0,a.bindActionCreators)(l.Nw.wx.buySell,e)}),S=((0,r.connect)(mapStateToProps,mapDispatchToProps),(0,r.connect)(mapStateToProps,mapDispatchToProps)(Z));var D=s("../../node_modules/ramda/es/isEmpty.js"),M=s("../../node_modules/qs/lib/index.js"),v=s.n(M);const selectors_getData=e=>{const t=l.wl.wx.zT.getFastLink(e),s=m.Nt.Success(t),n=l.wl.vE.AW.getDomains(e).getOrElse({walletHelper:"/wallet_helper"});return(0,h.Z)(((e,t)=>{const s=e.data.partner.toLowerCase(),r=v().stringify(Object.assign(Object.assign({},e.data.attributes),e.data.attributes.fastlinkParams));return{fastLink:t,iFrameUrl:`${n.walletHelper}/wallet-helper/${s}#/linkBank?${r}`}}))(s,t)},P=(0,k.ZP)(o.o9)`
+  height: 100%;
+  margin: 0;
+  padding: 0;
+`,j=k.ZP.iframe`
+  border: 0;
+  width: 100%;
+  height: 100%;
+`,Handler_template_success=e=>n.createElement(P,null,n.createElement(j,{src:e.iFrameUrl}));class L extends n.PureComponent{constructor(){super(...arguments),this.handlePostMessage=e=>{if("yodlee"!==e.data.from)return;if("sb"!==e.data.to)return;const{error:t,sites:s}=e.data;(0,D.Z)(s)?this.props.brokerageActions.setAddBankStep({addBankStep:i.Hb.ADD_BANK}):(this.props.brokerageActions.fetchBankTransferUpdate(s[0]),this.props.brokerageActions.fetchBTUpdateLoading())}}componentDidMount(){window.addEventListener("message",this.handlePostMessage,!1)}componentWillUnmount(){window.removeEventListener("message",this.handlePostMessage,!1)}render(){return this.props.data.cata({Failure:e=>n.createElement(p.Z,{message:{message:e}}),Loading:()=>n.createElement(u.H,null),NotAsked:()=>n.createElement(u.H,null),Success:e=>n.createElement(Handler_template_success,Object.assign({},e,this.props,this.state))})}}const N=(0,r.connect)((e=>({data:selectors_getData(e)})),(e=>({brokerageActions:(0,a.bindActionCreators)(l.Nw.wx.brokerage,e)})))(L);class F extends n.PureComponent{constructor(){super(...arguments),this.state={show:!1},this.handleClose=()=>{this.setState({show:!1}),setTimeout((()=>{this.props.close()}),o.x9)}}componentDidMount(){this.setState({show:!0})}render(){return n.createElement(o.ZP,Object.assign({},this.props,{onClose:this.handleClose,isOpen:this.state.show,"data-e2e":"addBankModal"}),this.props.step===i.Hb.ADD_BANK&&n.createElement(o.FK,null,n.createElement(S,Object.assign({},this.props,{handleClose:this.handleClose}))),this.props.step===i.Hb.ADD_BANK_HANDLER&&n.createElement(o.FK,null,n.createElement(N,Object.assign({},this.props,{handleClose:this.handleClose}))),this.props.step===i.Hb.ADD_BANK_STATUS&&n.createElement(o.FK,null,n.createElement(d.Z,Object.assign({},this.props,{handleClose:this.handleClose}))))}}const O=(0,r.connect)((e=>({step:l.wl.wx.zT.getAddBankStep(e)}))),z=(0,a.compose)((0,c.Z)(i.tl.ADD_BANK_YODLEE_MODAL,{transition:o.x9}),O)(F)}}]);
